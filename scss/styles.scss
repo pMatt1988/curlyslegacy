@@ -1,0 +1,64 @@
+@import "reset";
+$base-color: rgb(5, 17, 22);
+$other-color: whitesmoke;
+
+body {
+  display: grid;
+  grid-template-rows: auto 300px 1fr auto;
+}
+
+header {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  .slider {
+    background-color: $base-color;
+    color: $other-color;
+  }
+}
+
+nav {
+  text-align: center;
+
+  .dropdown {
+    display: inline-block;
+    .dropdown-content {
+      visibility: hidden;
+      position: absolute;
+      display: block;
+      min-width: 160px;
+      background-color: white;
+      border-color: $bcolor;
+      border-width: 2px;
+      border-radius: 5px;
+      a {
+        width: 100%;      
+      }
+    }
+  }
+
+  .dropdown:hover {
+    .dropdown-content {
+      visibility: visible;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $base-color;
+    padding: 10px;
+    display: inline-block;
+  }
+  a:hover {
+    color: $other-color;
+    background-color: $base-color;
+  }
+}
+
+main {
+  padding: 50px 100px;
+}
+
+footer {
+  text-align: center;
+}
